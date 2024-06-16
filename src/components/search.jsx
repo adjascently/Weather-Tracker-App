@@ -12,7 +12,7 @@ const ChooseCityLable = styled.span`
   font-weight: bold;
   margin: 10px auto;
 `;
-const SercheBox = styled.form`
+const SearchBox = styled.form`
   display: flex;
   flex-direction: row;
   border: 1px solid black;
@@ -42,12 +42,12 @@ const SercheBox = styled.form`
   }
 `;
 
-const Serche = ({ setCity, fetchWeather }) => {
+const Search = ({ setCity, fetchWeather }) => {
   return (
     <>
       <WeatherLogo src="/icons/day.svg" />
       <ChooseCityLable>Find Weather of your city</ChooseCityLable>
-      <SercheBox onSubmit={fetchWeather}>
+      <SearchBox onSubmit={fetchWeather}>
         <input
           onChange={(e) => setCity(e.target.value)}
           placeholder="City"
@@ -55,9 +55,9 @@ const Serche = ({ setCity, fetchWeather }) => {
         ></input>
         
         <button type="submit">Search</button>
-      </SercheBox>
+      </SearchBox>
     </>
   );
 };
 
-export default Serche;
+export default Search;
