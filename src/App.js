@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from "styled-components";
 import axios from "axios";
 
-import Serche from "./components/serche";
+import Search from "./components/search";
 import WeatherInfo from "./components/weather";
 
 
@@ -43,7 +43,7 @@ function App() {
       {/* weather is set initially not set */}
       {weather ? (
         <WeatherInfo weather={weather} /> ) : ( 
-        <Serche setCity={setCity} fetchWeather={fetchWeather} /> 
+        <Search setCity={setCity} fetchWeather={fetchWeather} /> 
       )}
     </Container>
   );
